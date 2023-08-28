@@ -1,8 +1,9 @@
 import TodoItem from './TodoItem';
+import { useState } from 'react';
 
-const TodoGroup = (props) =>{
-    return props.items.map((item, index) =>{
-       return <TodoItem key={index} item={item.item} />
+const TodoGroup = (props) => {
+    return props.todos.map((todo, index) => {
+        return <TodoItem key={index} item={todo} />
     });
 }
 

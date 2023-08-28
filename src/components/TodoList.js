@@ -1,15 +1,20 @@
 import TodoGroup from './TodoGroup';
+import TodoGenerator from './TodoGenerator';
+import { useState } from 'react';
 
 const TodoList = () =>{
-    const items = [
-        {item: "This is the first item"},
-        {item: "This is the second item"},
-        {item: "This is the third item"}
-    ];
+    const [todos, setTodos] = useState([]);
+
+    const onTodosChange = (newTodo) => {
+        console.log(newTodo);
+        setTodos([...todos, newTodo]);
+    };
 
     return (
         <div>
-            <TodoGroup items={items}/>
+            <h1>Todo List</h1>
+            <TodoGroup todos={todos} />
+            <TodoGenerator onTodosChange={onTodosChange} />
         </div>
     );
 }
