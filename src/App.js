@@ -1,12 +1,18 @@
-import TodoItem from './components/TodoItem';
 import './App.css';
+import TodoGroup from './components/TodoGroup';
 
 function App() {
-  return (
-    <div className="App">
-      <TodoItem item={"This is an item in the todo list"}/>
-    </div>
-  );
+    const items = [
+        {item: "This is the first item"},
+        {item: "This is the second item"},
+        {item: "This is the third item"}
+    ];
+
+    return (
+      <div className="App">
+        <TodoGroup items={items}/>
+      </div>
+    );
 }
 
 export default App;
