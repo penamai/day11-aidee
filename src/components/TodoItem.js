@@ -1,6 +1,6 @@
 const TodoItem = (props) =>{
     return(
-        <div>{props.item}</div>
+        <div className="TodoItem">{props.item}</div>
     );
 }
 

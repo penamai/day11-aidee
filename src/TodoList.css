@@ -1,0 +1,45 @@
+.TodoList{
+    width: 50%;
+}
+
+.TodoList > h1{
+    color: #D3A067;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.TodoList > .TodoGroup {
+    width: 100%;
+}
+
+.TodoList > .TodoGroup > .TodoItem{
+    width: 100%;
+    background-color: #994841;
+    opacity: 0.6;
+    color: #fff;
+    margin-bottom: 3%;
+    border: 2px solid #D3A067;
+    overflow: hidden;
+}
+
+.TodoList > .TodoGenerator{
+    width: 100%;
+}
+
+.TodoList > .TodoGenerator > input[type=text]{
+    width: 70%;
+    background-color: #DDC397;
+    color: #352E2F;
+}
+
+.TodoList > .TodoGenerator > button{
+    width: 20%;
+    background-color: #994841;
+    color: #DDC397;
+    border: none;
+}
+
+.TodoList > .TodoGenerator > button:hover{
+    color: #352E2F;
+    background-color: #D3A067;
+}

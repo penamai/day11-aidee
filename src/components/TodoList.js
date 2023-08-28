@@ -1,6 +1,7 @@
 import TodoGroup from './TodoGroup';
 import TodoGenerator from './TodoGenerator';
 import { useState } from 'react';
+import '../TodoList.css';
 
 const TodoList = () =>{
     const [todos, setTodos] = useState([]);
@@ -11,7 +12,7 @@ const TodoList = () =>{
     };
 
     return (
-        <div>
+        <div className="TodoList">
             <h1>Todo List</h1>
             <TodoGroup todos={todos} />
             <TodoGenerator onTodosChange={onTodosChange} />

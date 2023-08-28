@@ -1,9 +1,13 @@
 import TodoItem from './TodoItem';
 
 const TodoGroup = (props) => {
-    return props.todos.map((todo, index) => {
-        return <TodoItem key={index} item={todo} />
-    });
+    return (
+        <div className="TodoGroup">
+            {props.todos.map((todo, index) => {
+            return <TodoItem key={index} item={todo} />
+            })}
+        </div>
+    );
 }
 
 export default TodoGroup;
