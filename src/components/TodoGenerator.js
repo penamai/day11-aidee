@@ -1,12 +1,15 @@
 import { useRef } from 'react';
+import { useDispatch } from "react-redux";
+import { addTodo } from "./todoListSlice";
 
 const TodoGenerator = (props) =>{
     const inputTodoRef = useRef();
+    const dispatch = useDispatch();
 
     const onSubmitClick = () => {
         const newTodo = inputTodoRef.current.value;
         if(newTodo === '') return;
-        props.onTodosChange(newTodo);
+        dispatch(addTodo(newTodo));
         inputTodoRef.current.value = null;
     }
 
