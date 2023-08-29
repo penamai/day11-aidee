@@ -20,6 +20,17 @@
     margin-bottom: 3%;
     border: 2px solid #D3A067;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.TodoList > .TodoGroup > .TodoItem > span{
+    width: 80%;
+}
+
+.TodoList > .TodoGroup > .TodoItem > div{
+    width: 5%;
 }
 
 .TodoList > .TodoGenerator{

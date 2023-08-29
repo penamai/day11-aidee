@@ -5,21 +5,18 @@ const TodoItem = (props) =>{
     const style = props.done ? {textDecoration: "line-through"}: {};
     const dispatch = useDispatch();
     const handleToggleClick = () =>{
-        dispatch(toggleDone(props.id))
+        dispatch(toggleDone(props.id));
 
     }
-
-    const handleDelete = () => {
-        dispatch(deleteTodo(props.id))
+    const handleDelete = (event) => {
+        dispatch(deleteTodo(props.id));
+        event.stopPropagation();
     }
+    
     return(
-        <div  className="TodoItem" >
-        <div onClick={handleToggleClick}>
+        <div  className="TodoItem" onClick={handleToggleClick}>
             <span style={style}>{props.item}</span> 
-        </div>
-        <div onClick={handleDelete}>
-        ✖
-        </div>
+            <div onClick={handleDelete}>✖</div>
         </div>
     );
 }
