@@ -13,9 +13,13 @@ const todoListSlice = createSlice({
             text: action.payload,
             done: false
         }];
+    },
+    toggleDone: (state, action) =>{
+        const index = state.todoList.findIndex(todo => todo.id === action.payload);
+        state.todoList[index].done = !state.todoList[index].done;
     }
   },
 });
 
-export const { addTodo } = todoListSlice.actions;
+export const { addTodo, toggleDone } = todoListSlice.actions;
 export default todoListSlice.reducer;
