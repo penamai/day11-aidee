@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addTodo } from "./todoListSlice";
 import { v4 as uuidv4 } from 'uuid';
 
-const TodoGenerator = (props) =>{
+const TodoGenerator = () =>{
     const inputTodoRef = useRef();
     const dispatch = useDispatch();
 
