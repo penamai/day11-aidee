@@ -36,12 +36,12 @@
 }
 
 .TodoList > .TodoGroup > div > span{
-    width: 80%;
+    width: 95%;
 }
 
 .TodoList > .TodoGroup > div > div{
-    width: 5%;
     border: 1px solid #994841;
+    flex: 1;
 }
 
 .TodoList > .TodoGroup > div > div:hover{
