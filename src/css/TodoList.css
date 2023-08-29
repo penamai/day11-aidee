@@ -29,7 +29,7 @@
 }
 
 .TodoList > .TodoGroup > .TodoItemDone{
-    background-color: #fff;
+    background-color: #DDC397;
     color: #994841;
     opacity: 0.6;
     border: 2px solid #994841;
