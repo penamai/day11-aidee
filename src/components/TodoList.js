@@ -7,7 +7,6 @@ const TodoList = () =>{
     const [todos, setTodos] = useState([]);
 
     const onTodosChange = (newTodo) => {
-        console.log(newTodo);
         setTodos([...todos, newTodo]);
     };
 
