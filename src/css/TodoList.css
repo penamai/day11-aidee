@@ -60,11 +60,18 @@
     color: #352E2F;
 }
 
+::placeholder{
+    color: #994841;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
 .TodoList > .TodoGenerator > button{
     width: 20%;
     background-color: #994841;
     color: #DDC397;
     border: none;
+    font-weight: bold;
 }
 
 .TodoList > .TodoGenerator > button:hover{

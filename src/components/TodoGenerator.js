@@ -15,7 +15,7 @@ const TodoGenerator = (props) =>{
 
     return(
         <div className="TodoGenerator">
-            <input ref={inputTodoRef} type="text" />
+            <input ref={inputTodoRef} placeholder={"Enter a todo item..."} type="text" />
             <button onClick={onSubmitClick}>add</button>
         </div>
     );
