@@ -10,7 +10,12 @@ const TodoItem = (props) =>{
 
     }
     const handleDelete = (event) => {
-        dispatch(deleteTodo(props.id));
+        const confirmBox = window.confirm(
+            "Do you really want to delete this Todo Item?"
+        )
+        if (confirmBox){
+            dispatch(deleteTodo(props.id));            
+        }
         event.stopPropagation();
     }
     
