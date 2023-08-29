@@ -5,11 +5,11 @@ const TodoItem = (props) =>{
     const style = props.done ? {textDecoration: "line-through"}: {};
     const className = props.done ? "TodoItemDone": "TodoItem";
     const dispatch = useDispatch();
+
     const handleToggleClick = () =>{
         dispatch(toggleDone(props.id));
-
     }
-    const handleDelete = (event) => {
+    const handleDeleteClick = (event) => {
         const confirmBox = window.confirm(
             "Do you really want to delete this Todo Item?"
         )
@@ -22,7 +22,7 @@ const TodoItem = (props) =>{
     return(
         <div  className={className} onClick={handleToggleClick}>
             <span style={style}>{props.item}</span> 
-            <div onClick={handleDelete}>✖</div>
+            <div onClick={handleDeleteClick}>✖</div>
         </div>
     );
 }

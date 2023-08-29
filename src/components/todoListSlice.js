@@ -22,7 +22,6 @@ const todoListSlice = createSlice({
       const index = state.todoList.findIndex(todo => todo.id === action.payload);
       state.todoList.splice(index, 1);
     }
-
   },
 });
 

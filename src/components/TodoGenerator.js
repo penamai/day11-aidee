@@ -6,7 +6,7 @@ const TodoGenerator = (props) =>{
     const inputTodoRef = useRef();
     const dispatch = useDispatch();
 
-    const onSubmitClick = () => {
+    const handleSubmitClick = () => {
         const newTodo = inputTodoRef.current.value;
         if(newTodo === '') return;
         dispatch(addTodo(newTodo));
@@ -15,13 +15,13 @@ const TodoGenerator = (props) =>{
 
     const handleKeyDown = (event) =>{
         if(event.key === 'Enter')
-            onSubmitClick();
+            handleSubmitClick();
     }
 
     return(
         <div className="TodoGenerator">
             <input ref={inputTodoRef} placeholder={"Enter a todo item..."} type="text" onKeyDown={handleKeyDown}/>
-            <button onClick={onSubmitClick}>add</button>
+            <button onClick={handleSubmitClick}>add</button>
         </div>
     );
 }
