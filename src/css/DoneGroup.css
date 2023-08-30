@@ -1,0 +1,33 @@
+
+.doneGroup {
+    width: 100%;
+}
+
+.doneItem{
+    margin: 0 auto;
+    width: 50%;
+    background-color: #994841;
+    opacity: 0.6;
+    color: #fff;
+    border: 2px solid #D3A067;
+    display: flex;
+}
+
+.doneItem > span{
+    justify-self: center;
+    width: 90%;
+}
+
+.doneItem > div {
+    border: 1px solid #994841;
+    flex: 0.5;
+    justify-self: end;
+}
+
+.donetem > div:hover{
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #994841;
+    flex: 0.5;
+    justify-self: end;
+}

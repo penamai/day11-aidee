@@ -1,12 +1,21 @@
 import DoneGroup from './DoneGroup';
-import '../css/DoneList.css';
+import { Typography } from 'antd';
+
+const titleStyle = {
+    margin: 0, 
+    fontVariant: 'small-caps', 
+    color: '#DDC397'
+}
 
 const DoneList = () =>{
     return (
-        <div className="DoneList">
-            <h1>Done List</h1>
+        <>
+            <Typography.Title level={1} 
+                              style={titleStyle}>
+                Done List
+            </Typography.Title>
             <DoneGroup />
-        </div>
+        </>
     );
 }
 
