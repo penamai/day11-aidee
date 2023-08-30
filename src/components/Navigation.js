@@ -6,9 +6,9 @@ const Navigation = () =>{
         <div className="navigation">
             <nav>
                 <ul>
-                    <li><NavLink to={"/"}>Home</NavLink></li>
-                    <li><NavLink to={"/done"}>Done List</NavLink></li>
-                    <li><NavLink to={"/help"}>Help</NavLink></li>
+                    <li><NavLink className="navLink" to={"/"}>Home</NavLink></li>
+                    <li><NavLink className="navLink" to={"/done"}>Done List</NavLink></li>
+                    <li><NavLink className="navLink" to={"/help"}>Help</NavLink></li>
                 </ul>
             </nav>
         </div>
