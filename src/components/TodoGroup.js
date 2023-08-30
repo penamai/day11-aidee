@@ -1,16 +1,16 @@
 import TodoItem from './TodoItem';
 import { useSelector } from 'react-redux';
-import List from 'rc-virtual-list';
+import VirtualList from 'rc-virtual-list';
+import { List } from 'antd';
 
 const TodoGroup = () => {
     const todos = useSelector((state) => state.todo.todoList)
-    const data = todos.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo}/>
-    })
 
     return (
-        <List className="TodoGroup" data={data} height={500} itemHeight={15} itemKey="id">
-            {item => <div>{item}</div>}
+        <List>
+            <VirtualList className="TodoGroup" data={todos} height={500} itemHeight={15} itemKey="id">
+                {item => <List.Item key={item.id}><TodoItem key={item.id} todo={item} /></List.Item>}
+            </VirtualList>
         </List>
     );
 }
