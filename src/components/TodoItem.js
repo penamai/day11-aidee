@@ -1,4 +1,5 @@
 import { useTodos } from '../hooks/useTodos';
+import '../css/TodoItem.css'
 
 const TodoItem = (props) =>{
     const style = props.todo.done ? {textDecoration: "line-through"}: {};
@@ -29,7 +30,7 @@ const TodoItem = (props) =>{
     }
     
     return(
-        <div  className={className} onClick={handleToggleClick}>
+        <div className={className} onClick={handleToggleClick}>
             <span style={style}>{props.todo.text}</span> 
             <div onClick={handleUpdateClick}>⚙</div>
             <div onClick={handleDeleteClick}>✖</div>

@@ -8,23 +8,23 @@
     list-style: none;
 }
 
-.navigation > nav > ul > li:hover{
-    list-style: none;
-}
-
-.navigation > nav > ul > li > .navLink{
+.navLink{
     margin: 10px;
     padding: 10px;
     font-variant: small-caps;
     text-decoration: none;
     font-weight: bold;
     color: #352E2F;
-    background-color: #DDC397;
-    border: 1px solid #994841;
 }
 
-.navigation > nav > ul > li > .navLink:hover{
-    color: #DDC397;
-    background-color: #994841;
-    border: 1px solid #DDC397;
+.ant-menu-horizontal, .ant-menu-item::after, .ant-menu-item-selected::after{
+    border: none !important;
+}
+
+.ant-menu-item:hover{
+    border-bottom: 2px solid #DDC397 !important;
+}
+
+.ant-menu-item-selected {
+    color: #DDC397 !important;
 }

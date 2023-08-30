@@ -1,26 +1,3 @@
-.TodoList{
-    width: 50%;
-}
-
-.TodoList > h1{
-    color: #D3A067;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-.TodoList > .TodoGroup {
-    width: 100%;
-}
-
-.TodoList > .TodoGroup > div{
-    width: 100%;
-    margin-bottom: 3%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .TodoList > .TodoGroup > .TodoItem{
     background-color: #994841;
     opacity: 0.6;

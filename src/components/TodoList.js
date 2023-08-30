@@ -1,14 +1,23 @@
 import TodoGroup from './TodoGroup';
 import TodoGenerator from './TodoGenerator';
-import '../css/TodoList.css';
+import { Typography } from 'antd';
+
+const titleStyle = {
+    margin: 0, 
+    fontVariant: 'small-caps', 
+    color: '#DDC397'
+}
 
 const TodoList = () =>{
     return (
-        <div className="TodoList">
-            <h1>Todo List</h1>
+        <>
+            <Typography.Title level={1} 
+                              style={titleStyle}>
+                Todo List
+            </Typography.Title>
             <TodoGroup />
             <TodoGenerator/>
-        </div>
+        </>
     );
 }
 
