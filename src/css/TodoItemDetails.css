@@ -1,0 +1,14 @@
+.todoItemDetail{
+    color: #352E2F;
+    font-weight: bold;
+    background-color: #994841;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15%;
+}
+
+.todoItemDetail > h1{
+    color: #D3A067;
+    font-weight: bold;
+    font-variant: small-caps;
+}
