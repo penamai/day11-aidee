@@ -9,7 +9,7 @@ const TodoGroup = () => {
     })
 
     return (
-        <List className="TodoGroup" data={data} height={400} itemHeight={'5em'} itemKey="id">
+        <List className="TodoGroup" data={data} height={500} itemHeight={15} itemKey="id">
             {item => <div>{item}</div>}
         </List>
     );
