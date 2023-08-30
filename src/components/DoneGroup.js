@@ -10,7 +10,7 @@ const DoneGroup = () => {
     })
 
     return (
-        <List className="DoneGroup" data={data} height={400} itemHeight={30} itemKey="id">
+        <List className="DoneGroup" data={data} height={500} itemHeight={15} itemKey="id">
             {item => <div>{item}</div>}
         </List>
     );
