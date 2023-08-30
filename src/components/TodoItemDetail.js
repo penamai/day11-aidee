@@ -5,6 +5,12 @@ import { useParams } from 'react-router-dom';
 const TodoItemDetail = () => {
     const { id } = useParams();
     const todoItem = useSelector(state => state.todo.todoList.find(todo => todo.id === id));
+
+    if (todoItem === undefined) {
+        alert("ID not found!");
+        return (<></>);
+    }
+    
     return(
         <div className="todoItemDetail">
             <h1>Todo Item Detail</h1>
@@ -12,6 +18,7 @@ const TodoItemDetail = () => {
             <div>Item Text: {todoItem?.text}</div>
         </div>
     );
+
 }
 
 export default TodoItemDetail;
