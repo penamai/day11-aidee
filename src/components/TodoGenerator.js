@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useTodos } from '../hooks/useTodos';
+import '../css/TodoGenerator.css';
 
 const TodoGenerator = () =>{
     const inputTodoRef = useRef();
