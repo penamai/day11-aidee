@@ -6,12 +6,25 @@ import reportWebVitals from './reportWebVitals';
 import { store } from "./app/store.js";
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HelpPage from './pages/HelpPage'
+import TodoList from './components/TodoList.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([{
-  path: "/",
-  element: <App />
-}]);
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <TodoList />
+      },
+      {
+        path: "/help",
+        element: <HelpPage />
+      }
+    ]
+  }
+]);
 
 root.render(
   <React.StrictMode>

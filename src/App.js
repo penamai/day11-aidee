@@ -1,10 +1,12 @@
 import './css/App.css';
-import TodoList from './components/TodoList';
+import Navigation from './components/Navigation';
+import { Outlet } from 'react-router-dom';
 
 function App() {
     return (
       <div className="App">
-        <TodoList />
+        <Navigation />
+        <Outlet></Outlet>
       </div>
     );
 }
