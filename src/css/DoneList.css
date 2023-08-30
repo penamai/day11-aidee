@@ -1,0 +1,44 @@
+.doneList{
+    width: 50%;
+}
+
+.doneList > h1{
+    color: #D3A067;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.doneList > .doneGroup {
+    width: 100%;
+}
+
+.doneList > .doneGroup > div{
+    width: 100%;
+    margin-bottom: 3%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.doneList > .doneGroup > .doneItem{
+    background-color: #DDC397;
+    color: #994841;
+    opacity: 0.6;
+    border: 2px solid #994841;
+}
+
+.doneList > .doneGroup > div > span{
+    width: 95%;
+}
+
+.doneList > .doneGroup > div > div{
+    border: 1px solid #994841;
+    flex: 1;
+}
+
+.doneList > .doneGroup > div > div:hover{
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #994841;
+}
