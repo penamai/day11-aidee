@@ -7,6 +7,7 @@ const TodoItem = (props) =>{
     const dispatch = useDispatch();
 
     const handleToggleClick = () =>{
+        if(props.isDone) return;
         dispatch(toggleDone(props.todo.id));
     }
     const handleDeleteClick = (event) => {

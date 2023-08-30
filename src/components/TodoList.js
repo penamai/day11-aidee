@@ -6,8 +6,8 @@ const TodoList = (props) =>{
     return (
         <div className="TodoList">
             <h1>Todo List</h1>
-            <TodoGroup />
-            <TodoGenerator />
+            <TodoGroup isDone={props.isDone}/>
+            {!props.isDone && <TodoGenerator/>}
         </div>
     );
 }
