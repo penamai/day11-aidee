@@ -15,8 +15,13 @@ export const useTodos = () => {
         loadTodos();
     }
 
-    async function updateTodo(id, done){
+    async function updateTodoStatus(id, done){
         await todoApi.updateTodoTask(id, {done: done});
+        loadTodos();
+    }
+
+    async function updateTodoText(id, text){
+        await todoApi.updateTodoTask(id, {text: text});
         loadTodos();
     }
 
@@ -28,7 +33,8 @@ export const useTodos = () => {
     return{
         loadTodos,
         addTodo,
-        updateTodo,
+        updateTodoStatus,
+        updateTodoText,
         deleteTodo
     }
 }
