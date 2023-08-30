@@ -1,5 +1,6 @@
 import { useTodos } from '../hooks/useTodos';
 import '../css/TodoItem.css'
+import { CloseOutlined, EditOutlined } from '@ant-design/icons/lib/icons';
 
 const TodoItem = (props) =>{
     const style = props.todo.done ? {textDecoration: "line-through"}: {};
@@ -32,8 +33,8 @@ const TodoItem = (props) =>{
     return(
         <div className={className} onClick={handleToggleClick}>
             <span style={style}>{props.todo.text}</span> 
-            <div onClick={handleUpdateClick}>⚙</div>
-            <div onClick={handleDeleteClick}>✖</div>
+            <div onClick={handleUpdateClick}><EditOutlined /></div>
+            <div onClick={handleDeleteClick}><CloseOutlined /></div>
         </div>
     );
 }

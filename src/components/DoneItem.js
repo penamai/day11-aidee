@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTodos } from '../hooks/useTodos';
+import { CloseOutlined } from '@ant-design/icons';
 
 const DoneItem = (props) =>{
     const style = props.todo.done ? {textDecoration: "line-through"}: {};
@@ -23,7 +24,7 @@ const DoneItem = (props) =>{
     return(
         <div  className="doneItem" onClick={handleItemClick}>
             <span style={style}>{props.todo.text}</span> 
-            <div onClick={handleDeleteClick}>✖</div>
+            <div onClick={handleDeleteClick}><CloseOutlined /></div>
         </div>
     );
 }
