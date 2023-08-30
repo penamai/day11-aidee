@@ -9,9 +9,9 @@ const TodoGenerator = () =>{
 
     const handleSubmitClick = () => {
         const newTodo = inputTodoRef.current.value;
-        if(newTodo === '') return;
-        dispatch(addTodo({id: uuidv4(), text: newTodo, done: false}));
         inputTodoRef.current.value = null;
+        if(newTodo.trim() === '') return;
+        dispatch(addTodo({id: uuidv4(), text: newTodo, done: false}));
     }
 
     const handleKeyDown = (event) =>{
