@@ -1,17 +1,15 @@
 import { useRef } from 'react';
-import { useDispatch } from "react-redux";
-import { addTodo } from "./todoListSlice";
-import { v4 as uuidv4 } from 'uuid';
+import { useTodos } from '../hooks/useTodos';
 
 const TodoGenerator = () =>{
     const inputTodoRef = useRef();
-    const dispatch = useDispatch();
+    const { addTodo } = useTodos();
 
     const handleSubmitClick = () => {
-        const newTodo = inputTodoRef.current.value;
+        const text = inputTodoRef.current.value;
         inputTodoRef.current.value = null;
-        if(newTodo.trim() === '') return;
-        dispatch(addTodo({id: uuidv4(), text: newTodo, done: false}));
+        if(text.trim() === '') return;
+        addTodo(text);    
     }
 
     const handleKeyDown = (event) =>{

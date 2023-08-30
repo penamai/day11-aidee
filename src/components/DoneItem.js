@@ -1,11 +1,10 @@
-import { useDispatch } from "react-redux";
-import { deleteTodo } from "./todoListSlice";
 import { useNavigate } from 'react-router-dom';
+import { useTodos } from '../hooks/useTodos';
 
 const DoneItem = (props) =>{
     const style = props.todo.done ? {textDecoration: "line-through"}: {};
-    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const { deleteTodo } = useTodos();
 
     const handleItemClick = () => {
         navigate('/done/' + props.todo.id);
@@ -16,7 +15,7 @@ const DoneItem = (props) =>{
             "Do you really want to delete this Todo Item?"
         )
         if (confirmBox){
-            dispatch(deleteTodo(props.todo.id));            
+            deleteTodo(props.todo.id);  
         }
         event.stopPropagation();
     }
