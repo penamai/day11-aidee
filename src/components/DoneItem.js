@@ -23,8 +23,8 @@ const DoneItem = (props) =>{
     
     return(
         <div  className="doneItem" onClick={handleItemClick}>
-            <span style={style}>{props.todo.text}</span> 
-            <div onClick={handleDeleteClick}><CloseOutlined /></div>
+            <span className="itemSpan" style={style}>{props.todo.text}</span> 
+            <div className="itemClickable" onClick={handleDeleteClick}><CloseOutlined /></div>
         </div>
     );
 }

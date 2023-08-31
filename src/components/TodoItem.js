@@ -32,9 +32,9 @@ const TodoItem = (props) =>{
     
     return(
         <div className={className} onClick={handleToggleClick}>
-            <span style={style}>{props.todo.text}</span> 
-            <div onClick={handleUpdateClick}><EditOutlined /></div>
-            <div onClick={handleDeleteClick}><CloseOutlined /></div>
+            <span className="itemSpan" style={style}>{props.todo.text}</span> 
+            <div className="itemClickable" onClick={handleUpdateClick}><EditOutlined /></div>
+            <div className="itemClickable" onClick={handleDeleteClick}><CloseOutlined /></div>
         </div>
     );
 }

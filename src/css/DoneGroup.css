@@ -28,3 +28,20 @@
     flex: 0.5;
     justify-self: end;
 }
+
+.itemSpan{
+    justify-self: center;
+    width: 90%;
+}
+
+.itemClickable{
+    flex: 0.5;
+    justify-self: end;
+    border-bottom: 3px solid transparent !important;
+}
+
+.itemClickable:hover{
+    border-bottom: 3px solid #fff !important;
+    flex: 0.5;
+    justify-self: end;
+}
