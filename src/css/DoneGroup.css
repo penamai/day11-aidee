@@ -10,6 +10,7 @@
     color: #fff;
     border: 2px solid #D3A067;
     display: flex;
+    align-items: center;
 }
 
 .doneItem > span{
