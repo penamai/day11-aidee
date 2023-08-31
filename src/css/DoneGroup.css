@@ -19,13 +19,13 @@
 }
 
 .doneItem > div {
-    flex: 0.5;
+    flex: 1;
     justify-self: end;
 }
 
 .doneItem > div:hover{
     text-decoration: underline;
-    flex: 0.5;
+    flex: 1;
     justify-self: end;
 }
 
