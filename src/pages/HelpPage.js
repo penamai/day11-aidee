@@ -1,6 +1,12 @@
+import { Typography } from "antd";
+
+const { Title } = Typography;
+
 const HelpPage = () => {
     return(
-        <h1>This is help page.</h1>
+        <Title style={{fontVariant:"small-caps", color:"#DDC397"}}>
+            This is a help page.
+        </Title>
     )
 }
 
