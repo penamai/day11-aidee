@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useTodos } from '../hooks/useTodos';
 import '../css/TodoGenerator.css';
+import { Input, Button } from 'antd';
 
 const TodoGenerator = () =>{
     const inputTodoRef = useRef();
@@ -20,8 +21,8 @@ const TodoGenerator = () =>{
 
     return(
         <div className="TodoGenerator">
-            <input ref={inputTodoRef} placeholder={"Enter a todo item..."} type="text" onKeyDown={handleKeyDown}/>
-            <button onClick={handleSubmitClick}>add</button>
+            <Input className="inputBox" ref={inputTodoRef} size="large" placeholder={"Enter a todo item..."} type="text" onKeyDown={handleKeyDown}/>
+            <Button className="inputButton" type="primary" onClick={handleSubmitClick}>add</Button>
         </div>
     );
 }

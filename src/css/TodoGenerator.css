@@ -3,7 +3,7 @@
     height: 2em;
 }
 
-.TodoGenerator > input[type=text]{
+.TodoGenerator > .inputBox{
     width: 70%;
     height: 100%;
     background-color: #DDC397;
@@ -11,7 +11,7 @@
 }
 
 ::placeholder{
-    color: #994841;
+    color: #994841 !important;
     font-weight: bold;
     font-variant: small-caps;
 }
@@ -24,7 +24,7 @@
     border: none;
 }
 
-.TodoGenerator > button{
+.TodoGenerator > .inputButton{
     width: 20%;
     background-color: #994841;
     color: #DDC397;
@@ -32,7 +32,7 @@
     font-weight: bold;
 }
 
-.TodoGenerator > button:hover{
-    color: #352E2F;
-    background-color: #D3A067;
+.TodoGenerator > .inputButton:hover{
+    color: #352E2F !important;
+    background-color: #D3A067 !important;
 }
